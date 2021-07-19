@@ -1,0 +1,25 @@
+Package: ecointeraction
+Type: Package
+Title: Set of tools for ecological interaction geospatial analysis
+Version: 0.1.0
+Author: Angel Luis Robles Fernández
+Maintainer: The package maintainer <a.l.robles.fernadnez@gmail.com>
+Description: This packages provies tools for the eocological interacteion analysis.
+    This is analysis is carried out using Machine Learning techniques.
+License: GPL-3 + file LICENSE
+Depends: R (>= 3.5.0)
+Imports:
+    dplyr,
+    magrittr,
+    rlang,
+    stats,
+    poweRlaw,
+    parallel
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
