@@ -13,9 +13,9 @@ top_10_incidence_coronavirus <- read_csv("data-raw/top_10_incidence_coronavirus.
 top_10_susceptible_coronavirus <- read_csv("data-raw/top_10_susceptible_coronavirus.csv")
 
 
-###############################################
+################################################
 # plasmodium top incidence environmental plots #
-###############################################
+################################################
 
 birds1 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds1/")
 birds2 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds2/")
@@ -28,7 +28,6 @@ birds1 <-  birds1 %>%
 
 birds2 <-  birds2 %>%
   filter(SCINAME %in% top_10_incidence_plasmodium$species[1:6])
-
 
 birds3 <-  birds3 %>%
   filter(SCINAME %in% top_10_incidence_plasmodium$species[1:6])
@@ -124,9 +123,9 @@ plasmodium_incidence_env_plot
 dev.off()
 
 
-###############################################
-# plasmodium top susceptible enviromental plots #
-###############################################
+##################################################
+# plasmodium top susceptible environmental plots #
+##################################################
 
 birds1 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds1/")
 birds2 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds2/")
@@ -185,7 +184,7 @@ plasmodium_susceptible_env_sample <- plasmodium_susceptible_env %>%
   group_by(species) %>%
   sample_n(1000)
 # ggplot(faithful, aes(waiting, eruptions, fill = eruptions > 3)) +
-#   stat_ellipse(geom = "polygon")
+# stat_ellipse(geom = "polygon")
 
 PCA_sample <- PCA %>% as_tibble() %>%
   na.exclude() %>%
@@ -213,12 +212,10 @@ plasmodium_susceptible_env_plot <- PCA_sample %>%
   stat_ellipse(data = plasmodium_susceptible_env_sample,  aes(PCA1.tif, PCA2.tif, fill = species, col = species), geom = "polygon", alpha = 0.6, size = 1.3) +
   geom_point(data = plasmodium_susceptible_env_summarize, aes(PCA1, PCA2,  shape = species ), col = "black", size = 10) +
   theme_classic() +
-  #ggtitle("Enviromental space") +
   xlab("PC1") +
   xlim(-6, 10) +
   ylab("PC2") +
   ylim(-5, 21) +
-  #ggtitle("Species environmental centroids") +
   guides(colour = guide_legend(override.aes = list(size=2))) +
   theme(plot.title = element_text(hjust = 0.5, size = 30, face = "bold"),
         legend.title=element_text(size = 30, face = "bold"),
@@ -236,7 +233,7 @@ plasmodium_susceptible_env_plot
 dev.off()
 
 
-### wnv inicdence
+### wnv incidence
 birds1 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds1/")
 birds2 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds2/")
 birds3 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds3/")
@@ -248,7 +245,6 @@ birds1 <-  birds1 %>%
 
 birds2 <-  birds2 %>%
   filter(SCINAME %in% top_10_incidence_wnv$species[1:6])
-
 
 birds3 <-  birds3 %>%
   filter(SCINAME %in% top_10_incidence_wnv$species[1:6])
@@ -313,12 +309,10 @@ wnv_incidence_env_plot <- PCA_sample %>%
   stat_ellipse(data = wnv_incidence_env_sample,  aes(PCA1.tif, PCA2.tif, fill = species, col = species), geom = "polygon", alpha = 0.6, size = 1.3) +
   geom_point(data = wnv_incidence_env_summarize, aes(PCA1, PCA2,  shape = species ), col = "black", size = 10) +
   theme_classic() +
-  #ggtitle("Enviromental space") +
   xlab("PC1") +
   xlim(-6, 10) +
   ylab("PC2") +
   ylim(-5, 21) +
-  #ggtitle("Species environmental centroids") +
   guides(colour = guide_legend(override.aes = list(size=2))) +
   theme(plot.title = element_text(hjust = 0.5, size = 30, face = "bold"),
         legend.title=element_text(size = 30, face = "bold"),
@@ -348,7 +342,6 @@ birds1 <-  birds1 %>%
 
 birds2 <-  birds2 %>%
   filter(SCINAME %in% top_10_susceptible_wnv$species[1:6])
-
 
 birds3 <-  birds3 %>%
   filter(SCINAME %in% top_10_susceptible_wnv$species[1:6])
@@ -413,12 +406,10 @@ wnv_susceptible_env_plot <- PCA_sample %>%
   stat_ellipse(data = wnv_susceptible_env_sample,  aes(PCA1.tif, PCA2.tif, fill = species, col = species), geom = "polygon", alpha = 0.6, size = 1.3) +
   geom_point(data = wnv_susceptible_env_summarize, aes(PCA1, PCA2,  shape = species ), col = "black", size = 10) +
   theme_classic() +
-  #ggtitle("Enviromental space") +
   xlab("PC1") +
   xlim(-6, 10) +
   ylab("PC2") +
   ylim(-5, 21) +
-  #ggtitle("Species environmental centroids") +
   guides(colour = guide_legend(override.aes = list(size=2))) +
   theme(plot.title = element_text(hjust = 0.5, size = 30, face = "bold"),
         legend.title=element_text(size = 30, face = "bold"),
@@ -439,7 +430,7 @@ dev.off()
 
 
 
-### wnv inicdence
+### wnv incidence
 mammals <- sf::read_sf("/home/alrobles/maps/shapes/mammals/")
 
 
@@ -500,12 +491,10 @@ coronavirus_incidence_env_plot <- PCA_sample %>%
   stat_ellipse(data = coronavirus_incidence_env_sample,  aes(PCA1.tif, PCA2.tif, fill = species, col = species), geom = "polygon", alpha = 0.6, size = 1.3) +
   geom_point(data = coronavirus_incidence_env_summarize, aes(PCA1, PCA2,  shape = species ), col = "black", size = 10) +
   theme_classic() +
-  #ggtitle("Enviromental space") +
   xlab("PC1") +
   xlim(-6, 10) +
   ylab("PC2") +
   ylim(-5, 21) +
-  #ggtitle("Species environmental centroids") +
   guides(colour = guide_legend(override.aes = list(size=2))) +
   theme(plot.title = element_text(hjust = 0.5, size = 30, face = "bold"),
         legend.title=element_text(size = 30, face = "bold"),
@@ -588,7 +577,6 @@ coronavirus_susceptible_env_plot <- PCA_sample %>%
   xlim(-6, 10) +
   ylab("PC2") +
   ylim(-5, 21) +
-  #ggtitle("Species environmental centroids") +
   guides(colour = guide_legend(override.aes = list(size=2))) +
   theme(plot.title = element_text(hjust = 0.5, size = 30, face = "bold"),
         legend.title=element_text(size = 30, face = "bold"),
