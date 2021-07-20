@@ -2,7 +2,7 @@ library(phytools)
 list.files(pattern = ".tre")
 #reading a sample of 1000 trees from birdtree.org
 birds <- read.nexus("data-raw/output.nex")
-#taking a sample for replication pourpose
+#taking a sample for replication purpose
 sp_sample <- sample(birds[1]$tree_1663$tip.label, length(birds[1]$tree_1663$tip.label))
 
 prune_tree <- purrr::map(birds[1:100], keep.tip, sp_sample)
@@ -26,7 +26,7 @@ BirdTable <- bird_consensus %>%
   # rename species
   dplyr::mutate_at(c("item1", "item2"), function(x) str_replace(x, "_", " " ))
 
-# write phylogenetic distance pairs (large file, don't run)
+# phylogenetic distance pairs (don't run)
 # readr::write_csv(BirdTable,"data-raw/birds_phylo_distance_pairs.csv")
 
 #summarize median distance
@@ -34,4 +34,4 @@ BirdTable <- BirdTable %>%
   group_by(item1) %>%
   summarise(phylo.distance = median(phylo.distance))
 
-readr::write_csv(BirdTable, "data-raw/birds_phylo_distance.csv" )
+readr::write_csv(BirdTable, "data-raw/birds_phylo_distance.csv")
