@@ -13,7 +13,7 @@ if(length(new.packages)) install.packages(new.packages, repos = "https://cloud.r
 sapply(list.of.packages, require, character.only = TRUE)
 library(ecointeraction)
 
-# cutting top 10 incidence mammals with dengue incidence
+# cutting top 10 incidence bats with coronavirus incidence
 bats_cutoff <- ecointeraction::batscoronavirus  %>%
   ecointeraction::acummulate_incidence(species) %>%
   ecointeraction::cutoff_incidence(accuracy =  4) %>%
