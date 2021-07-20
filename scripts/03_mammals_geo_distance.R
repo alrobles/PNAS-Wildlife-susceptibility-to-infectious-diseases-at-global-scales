@@ -11,7 +11,7 @@ mammals <- paths %>%
     return(Mammals)
   }) %>% purrr::reduce(rbind)  %>% sf::st_centroid(of_largest_polygon = TRUE)
 
-#ensure one point per species
+#ensure one point per species (i.e., avoid code breaking if there are more than two points per species)
 
 mammals <- mammals %>%
   group_by(scientific) %>%
