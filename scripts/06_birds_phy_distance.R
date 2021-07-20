@@ -27,7 +27,7 @@ BirdTable <- bird_consensus %>%
   dplyr::mutate_at(c("item1", "item2"), function(x) str_replace(x, "_", " " ))
 
 # phylogenetic distance pairs (don't run)
-# readr::write_csv(BirdTable,"data-raw/birds_phylo_distance_pairs.csv" )
+# readr::write_csv(BirdTable,"data-raw/birds_phylo_distance_pairs.csv")
 
 #summarize median distance
 BirdTable <- BirdTable %>%
