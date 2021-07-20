@@ -233,7 +233,12 @@ plasmodium_susceptible_env_plot
 dev.off()
 
 
-### wnv incidence
+
+#############################################
+### wnv top incidence environmental plots ###
+#############################################
+
+
 birds1 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds1/")
 birds2 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds2/")
 birds3 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds3/")
@@ -330,7 +335,12 @@ wnv_incidence_env_plot
 dev.off()
 
 
-### wnv susceptible
+
+#######################
+### wnv susceptible ###
+#######################
+
+
 birds1 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds1/")
 birds2 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds2/")
 birds3 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds3/")
@@ -428,9 +438,11 @@ dev.off()
 
 
 
+#############################
+### coronavirus incidence ###
+#############################
 
 
-### wnv incidence
 mammals <- sf::read_sf("/home/alrobles/maps/shapes/mammals/")
 
 
@@ -511,7 +523,13 @@ png("data-raw/coronavirus_incidence_env_plot.png", width = 480*2, height = 480*2
 coronavirus_incidence_env_plot
 dev.off()
 
-### wnv susceptible
+
+
+###############################
+### coronavirus susceptible ###
+###############################
+
+
 mammals <- sf::read_sf("/home/alrobles/maps/shapes/mammals/")
 
 
@@ -572,7 +590,6 @@ coronavirus_susceptible_env_plot <- PCA_sample %>%
   stat_ellipse(data = coronavirus_susceptible_env_sample,  aes(PCA1.tif, PCA2.tif, fill = species, col = species), geom = "polygon", alpha = 0.6, size = 1.3) +
   geom_point(data = coronavirus_susceptible_env_summarize, aes(PCA1, PCA2,  shape = species ), col = "black", size = 10) +
   theme_classic() +
-  #ggtitle("Enviromental space") +
   xlab("PC1") +
   xlim(-6, 10) +
   ylab("PC2") +
