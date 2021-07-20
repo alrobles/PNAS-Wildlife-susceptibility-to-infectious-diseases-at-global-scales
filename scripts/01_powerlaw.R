@@ -1,8 +1,8 @@
 
 library(poweRlaw)
 library(cowplot)
-library("grid")
-library("ggplotify")
+library(grid)
+library(ggplotify)
 library(tidyverse)
 
 #install ecointeraction package from github
