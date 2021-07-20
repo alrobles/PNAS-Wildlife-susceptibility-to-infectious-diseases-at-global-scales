@@ -12,9 +12,6 @@ new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"
 if(length(new.packages)) install.packages(new.packages, repos = "https://cloud.r-project.org/")
 sapply(list.of.packages, require, character.only = TRUE)
 library(ecointeraction)
-# Reading mammals and dengue database
-
-
 
 # cutting top 10 incidence mammals with dengue incidence
 birds_cutoff <- ecointeraction::birdsplasmodiumrelictum  %>%
