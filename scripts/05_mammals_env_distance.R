@@ -23,7 +23,7 @@ safely_max <- purrr::possibly(.f = max_density, otherwise = NULL, quiet = FALSE)
 
 mammals_centroids <- mammals %>%
   # warning with the ram
-  #test run  first 100 rows
+  #test run first 100 rows
   #slice(1:8) %>%
   split(., .$scientific) %>%
   #furrr::future_map(.x = ., .y = names(.), function(i, j) sf::st_crop(PCA, i, crop = TRUE) %>%
