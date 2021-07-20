@@ -17,4 +17,4 @@ MammalsTable <- MammalsTable %>%
   group_by(item1) %>%
   summarise(phylo.distance = median(phylo.distance))
 
-readr::write_csv(MammalsTable,"data-raw/mammals_phylo_distance.csv" )
+readr::write_csv(MammalsTable,"data-raw/mammals_phylo_distance.csv")
