@@ -5,6 +5,11 @@ library("grid")
 library("ggplotify")
 library(tidyverse)
 
+#install ecointeraction package
+install.packages("remotes")
+remotes::install_github("alrobles/natcommSubmit_26853")
+
+#get power law
 malaria_pl = get_powerlaw(ecointeraction::birdsplasmodiumrelictum$incidence, threads = 7)
 wnv_pl = get_powerlaw(ecointeraction::birdswnv$incidence, threads = 7)
 coronavirus_pl = get_powerlaw(ecointeraction::batscoronavirus$incidence, threads = 7)
