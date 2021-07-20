@@ -336,9 +336,9 @@ dev.off()
 
 
 
-#######################
-### wnv susceptible ###
-#######################
+###############################################
+### wnv top susceptible environmental plots ###
+###############################################
 
 
 birds1 <- sf::read_sf("/home/alrobles/maps/shapes/birds/birds1/")
@@ -438,9 +438,9 @@ dev.off()
 
 
 
-#############################
-### coronavirus incidence ###
-#############################
+####################################################
+### coronavirus top incidence environmental plots###
+####################################################
 
 
 mammals <- sf::read_sf("/home/alrobles/maps/shapes/mammals/")
@@ -525,9 +525,9 @@ dev.off()
 
 
 
-###############################
-### coronavirus susceptible ###
-###############################
+#######################################################
+### coronavirus top susceptible environmental plots ###
+#######################################################
 
 
 mammals <- sf::read_sf("/home/alrobles/maps/shapes/mammals/")
