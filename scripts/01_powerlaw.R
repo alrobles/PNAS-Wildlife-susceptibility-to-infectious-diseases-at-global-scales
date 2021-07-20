@@ -5,7 +5,7 @@ library("grid")
 library("ggplotify")
 library(tidyverse)
 
-#install ecointeraction package
+#install ecointeraction package from github
 install.packages("remotes")
 remotes::install_github("alrobles/natcommSubmit_26853")
 
