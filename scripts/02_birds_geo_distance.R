@@ -20,7 +20,7 @@ birds <- paths %>%
   return(BirdsCentroid)
 }) %>% purrr::reduce(rbind)
 
-#ensure one point per species
+#ensure one point per species (i.e., avoid code breaking if there are more than two points per species)
 
 birds <- birds %>%
   group_by(SCINAME) %>%
