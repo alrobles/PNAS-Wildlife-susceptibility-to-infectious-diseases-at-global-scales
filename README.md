@@ -9,7 +9,8 @@ CPU:  Intel(R) Core(TM) i7-6700 CPU @ 3.40GH with 64GB RAM
 File description and steps:
 
 install this repository 
-- Download scripts from the GitHub repository (https://github.com/alrobles/natcommSubmit_26853/scripts)
+- Download scripts from the GitHub repository (https://github.com/alrobles/PNASSubmit-Wildlife-susceptibility-to-infectious-diseases-at-global-scales
+/scripts)
 - Download all files with raw data (i.e., distribution files for birds and mammals and PCs from bioclimatic layers) 
 from the following Google Drive directory (https://drive.google.com/drive/folders/1XhKyYw2u5RbnKF0d4BXw0C3DARiICf6r?usp=sharing). 
 
