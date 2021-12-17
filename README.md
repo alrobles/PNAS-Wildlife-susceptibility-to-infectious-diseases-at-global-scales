@@ -1,4 +1,4 @@
-# natcommSubmit_26853
+# Wildlife susceptibility to infectious diseases at global scales
 
 Instructions to run the code used to generate results in the manuscript “Wildlife susceptibility to infectious diseases at global scales” (NCOMMS-21-26853)
 
