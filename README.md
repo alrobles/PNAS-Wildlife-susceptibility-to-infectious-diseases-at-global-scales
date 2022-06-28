@@ -1,4 +1,4 @@
-# Wildlife susceptibility to infectious diseases at global scales
+# Wildlife susceptibility to infectious diseases at global scale
 
 Instructions to run the code used to generate results in the manuscript “Wildlife susceptibility to infectious diseases at global scales” (PNAS)
 
