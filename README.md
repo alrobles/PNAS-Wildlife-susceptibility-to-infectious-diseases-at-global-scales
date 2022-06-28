@@ -1,6 +1,6 @@
 # Wildlife susceptibility to infectious diseases at global scale
 
-Instructions to run the code used to generate results in the manuscript “Wildlife susceptibility to infectious diseases at global scales” (PNAS)
+Instructions to run the code used to generate results in the manuscript “Wildlife susceptibility to infectious diseases at global scale” (PNAS)
 
 All analyses were run in a computer with the following specifications:
 
