@@ -7,7 +7,7 @@ library(tidyverse)
 
 #install ecointeraction package from github
 install.packages("remotes")
-remotes::install_github("alrobles/natcommSubmit_26853")
+remotes::install_github("alrobles/PNAS-Wildlife-susceptibility-to-infectious-diseases-at-global-scales")
 
 #get power law
 malaria_pl = get_powerlaw(ecointeraction::birdsplasmodiumrelictum$incidence, threads = 7)
