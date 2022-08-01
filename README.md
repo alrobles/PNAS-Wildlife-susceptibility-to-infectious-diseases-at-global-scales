@@ -1,6 +1,6 @@
-# Wildlife susceptibility to infectious diseases at global scale
+# Wildlife susceptibility to infectious diseases at global scales
 
-Instructions to run the code used to generate results in the manuscript “Wildlife susceptibility to infectious diseases at global scale” (PNAS)
+Instructions to run the code used to generate results in the manuscript “Wildlife susceptibility to infectious diseases at global scales” (PNAS)
 
 All analyses were run in a computer with the following specifications:
 
@@ -9,7 +9,7 @@ CPU:  Intel(R) Core(TM) i7-6700 CPU @ 3.40GH with 64GB RAM
 File description and steps:
 
 Install this repository 
-- Download scripts from the GitHub repository (https://github.com/alrobles/PNAS-Wildlife-susceptibility-to-infectious-diseases-at-global-scale
+- Download scripts from the GitHub repository (https://github.com/alrobles/PNAS-Wildlife-susceptibility-to-infectious-diseases-at-global-scales
 /scripts)
 - Download all files with raw data (i.e., distribution files for birds and mammals and PCs from bioclimatic layers) 
 from the following Google Drive directory (https://drive.google.com/drive/folders/1XhKyYw2u5RbnKF0d4BXw0C3DARiICf6r?usp=sharing). 
